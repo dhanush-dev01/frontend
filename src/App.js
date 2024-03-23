@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Products from "./components/product";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Login from "./components/login";
+import Phases from "./components/phases";
+import InwardForm from "./components/inwardform";
+import OutwardForm from "./components/outwardform";
+import QuotationForm from "./components/qutationform";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/phases">
+            <Phases/>
+          </Route>
+          <Route path="/inwardform">
+            <InwardForm/>
+          </Route>
+          <Route path="/outwardform">
+            <OutwardForm/>
+          </Route>
+          <Route path="/quotationform">
+            <QuotationForm/>
+          </Route>
+          <Route path="/">
+            <Products/>
+          </Route>
+        </Switch>
+    </Router>
   );
 }
 
