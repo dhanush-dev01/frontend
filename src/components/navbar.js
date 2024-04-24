@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
         <ul class="nav-links">
           <li>
-            <a href="#">this is not home</a>
+            <a href="#">staging environment</a>
           </li>
           <li>
             <a href="#">Solutions</a>
